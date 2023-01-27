@@ -1,0 +1,225 @@
+.form {
+  position: relative;
+  z-index: 1;
+  background: url('../img/form__back.webp') center/cover no-repeat;
+  body.no-webp & {
+    background: url('../img/form__back.jpg') center/cover no-repeat;
+  }
+  @media (min-width: $tablet-min) {
+    background: url('../img/form__back--tablet.webp') center/cover no-repeat;
+    body.no-webp & {
+      background: url('../img/form__back--tablet.jpg') center/cover no-repeat;
+    }
+  }
+  @media (min-width: $desktop-min) {
+    background: url('../img/form__back--desktop.webp') center/cover no-repeat;
+    body.no-webp & {
+      background: url('../img/form__back--desktop.jpg') center/cover no-repeat;
+    }
+  }
+  &__container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @media (min-width: $tablet-min) {
+      padding: 40px;
+    }
+    @media (min-width: $desktop-min) {
+      padding: 200px 40px;
+    }
+  }
+  &__wrapper {
+    max-width: 400px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: $lorange;
+    @media (min-width: $tablet-min) {
+      max-width: 1140px;
+      padding: 32px;
+    }
+    @media (min-width: $desktop-min) {
+      display: flex;
+      justify-content: space-between;
+      padding: 80px;
+      background: url('../img/form__wrapper-back.webp') center/cover no-repeat;
+      body.no-webp & {
+        background: url('../img/form__wrapper-back.jpg') center/cover no-repeat;
+      }
+    }
+  }
+  &__text {
+    h2, p {
+      margin-bottom: 32px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    p {
+      font-weight: 400;
+    }
+    @media (min-width: $tablet-min) {
+      h2, p {
+        margin-bottom: 40px;
+      }
+      h2 {
+        font-size: 36px;
+        line-height: 43px;
+      }
+    }
+    @media (min-width: $desktop-min) {
+      max-width: 580px;
+    }
+  }
+  &__form {
+    margin-top: 32px;
+    overflow: hidden;
+    @media (min-width: $tablet-min) {
+      margin-top: 58px;
+    }
+    @media (min-width: $desktop-min) {
+      max-width: 320px;
+      margin-top: 0;
+      margin-left: 80px;
+    }
+  }
+  &__slide-list {
+    display: flex;
+    align-items: stretch;
+    width: 200%;
+    transition: 0.3s ease;
+  }
+  &__slide-item {
+    width: 50%;
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      flex-wrap: wrap;
+      align-content: space-between;
+      height: 263px;
+    }
+  }
+  &__row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    &--promocode {
+      margin-bottom: 0;
+    }
+    label, input {
+      font-family: 'Raleway';
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    label {
+      margin-bottom: 10px;
+    }
+    input {
+      width: calc(100% - 2px);
+      margin: 0 auto;
+      padding: 15px 8px;
+      color: $brown;
+      background-color: $alorange;
+      border: 1px solid $alorange;
+      border-radius: 6px;
+      &::placeholder {
+        color: $lbrown;
+      }
+      &:hover {
+        outline: 1px solid $lbrown;
+      }
+      &:focus {
+        outline: 1px solid $brown;
+      }
+    }
+    @media (min-width: $tablet-min) {
+      width: calc(50% - 20px);
+      &--mail {
+        margin-bottom: 0;
+      }
+      &--antibot {
+        order: 1;
+      }
+      &--simvoly {
+        margin-bottom: 0;
+      }
+    }
+    @media (min-width: $desktop-min) {
+      width: auto;
+      &--mail {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__button {
+    width: 100%;
+    margin-top: 40px;
+    padding: 15px 0;
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: calc(50% - 20px);
+      margin-top: auto;
+    }
+  }
+  &__buttons {
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      order: 2;
+      width: calc(50% - 20px);
+      margin-top: auto;
+    }
+    @media (min-width: $desktop-min) {
+      margin-top: 40px;
+    }
+  }
+  &__button-list {
+    display: flex;
+  }
+  &__button-item {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+    &--prev {
+      width: 42%;
+      margin-right: 10px;
+    }
+    &--submit {
+      flex-grow: 1;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    &--active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  &__confirm {
+    margin-top: 20px;
+  }
+  &__confirm-label {
+    position: relative;
+    display: flex;
+    padding-left: 30px;
+    font-family: 'PTSans';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    input[type='checkbox'] {
+      display: none;
+    }
+    input[type='checkbox']:checked + span {
+      background: url('../img/confirm.svg') center/12px 8px no-repeat $green;
+    }
+    span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 20px;
+      min-width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      border: 1px solid $green;
+      border-radius: 4px;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+.footer {
+  background-color: $brown;
+  &__container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @media (min-width: $tablet-min) {
+      padding: 32px 24px;
+    }
+    @media (min-width: $desktop-min) {
+      padding: 80px 20px;
+    }
+  }
+  h2, h3, a, p {
+    color: $lorange;
+  }
+  a {
+    &:hover {
+      color: $yellow;
+    }
+    &:active {
+      color: $lbrown;
+    }
+  }
+  &__wrapper {
+    h2 {
+      margin-bottom: 24px;
+    }
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      position: relative;
+    }
+    @media (min-width: $desktop-min) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  &__item {
+    max-width: 320px;
+    padding-right: 45px;
+    margin-right: auto;
+    margin-bottom: 48px;
+    &--contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      a {
+        margin-bottom: 16px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      &--contact {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-right: 0;
+        width: auto;
+      }
+    }
+    @media (min-width: $desktop-min) {
+      max-width: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &__office-list {
+    @media (min-width: $desktop-min) {
+      display: flex;
+    }
+  }
+  &__office-item {
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    h3, a, p  {
+      font-size: 18px;
+      line-height: 21px;
+    }
+    @media (min-width: $desktop-min) {
+      max-width: 275px;
+      margin-bottom: 0;
+      margin-right: 40px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__socials-list {
+    padding: 0;
+    list-style: none;
+    li {
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+  &__tel, &__mail {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  &__tel {
+    font-family: 'Roboto';
+  }
+  &__send {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 32px;
+    background-color: $lyellow;
+    border-radius: 12px;
+    &:hover {
+      opacity: 0.7;
+    }
+    &:active {
+      opacity: 0.5;
+    }
+    span {
+      margin-right: 10px;
+    }
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: 247px;
+    }
+  }
+  &__copyright {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: $metall;
+    @media (min-width: $desktop-min) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+<section class="form">
+  <div class="container form__container">
+    <div class="form__wrapper">
+      <div class="form__text">
+        <h2>Заполните форму и начните развивать свой бизнес прямо сейчас!</h2>
+        <p>Регистрация на нашем сайте занимает несколько минут, просим ответить на все вопросы полностью и корректно! После подтверждения регистрации вы попадёте в систему, где большинство процессов автоматизированы, что сэкономит ваше время и деньги!</p>
+      </div>
+      <form class="form__form">
+        <div class="form__slide-list">
+          <div class="form__slide-item">
+            <div class="form__row form__row--name">
+              <label for="name">Ваше имя</label>
+              <input type="text" name="name" placeholder="Фролова Александра Васильевна" required>
+            </div>
+            <div class="form__row form__row--company">
+              <label for="company">Название Компании</label>
+              <input type="text" name="company" placeholder="ООО Атлантика" required>
+            </div>
+            <div class="form__row form__row--mail">
+              <label for="E-mail">E-mail</label>
+              <input type="email" name="E-mail" placeholder="flolovaalexa@com.ru" required>
+            </div>
+            <div class="form__row form__row--tel">
+              <label for="tel">Номер телефона</label>
+              <input type="tel" name="tel" placeholder="+7 (XXX) - XXX XX XX" required>
+            </div>
+            <div class="form__row form__row--promocode">
+              <label for="promocode">Промокод</label>
+              <input type="text" name="promocode" placeholder="HGF864" required>
+            </div>
+            <button type="button" class="btn btn--yellow form__button form__button--next">Далее</button>
+          </div>
+          <div class="form__slide-item">
+            <div class="form__row form__row--password">
+              <label for="password">Пароль</label>
+              <input type="password" name="password" placeholder="Создайте пароль" required>
+            </div>
+            <div class="form__row form__row--password-confirm">
+              <label for="password-confirm">Пароль</label>
+              <input type="password" name="password-confirm" placeholder="Повторите пароль" required>
+            </div>
+            <div class="form__row form__row--antibot">
+              <picture>
+                <source type="image/webp" srcset="img/form__antibot--desktop.webp" media="(min-width: 1366px)">
+                <source type="image/webp" srcset="img/form__antibot--tablet.webp" media="(min-width: 768px)">
+                <source type="image/webp" srcset="img/form__antibot.webp">
+                <source srcset="img/form__antibot--desktop.jpg" media="(min-width: 1366px)">
+                <source srcset="img/form__antibot--tablet.jpg" media="(min-width: 768px)">
+                <img src="img/form__antibot.jpg" alt="Символы">
+              </picture>
+            </div>
+            <div class="form__row form__row--simvoly">
+              <label for="simvoly">Введите символы из картинки</label>
+              <input type="text" name="simvoly" placeholder="Код из картинки" required>
+            </div>
+            <div class="form__buttons">
+              <div class="form__button-list">
+                <button type="button" class="btn btn--yellow form__button-item form__button-item--prev">Назад</button>
+                <button type="button" class="btn btn--grey form__button-item form__button-item--submit">Подтвердить</button>
+              </div>
+              <div class="form__confirm">
+                <label class="form__confirm-label">
+                  <input class="form__confirm-input" type="checkbox" name="confirm" checked="false">
+                  <span></span>
+                  Я даю согласие на обработку моих персональных данных и правовых документов
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.flex {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.--just-space {
+	justify-content: space-between;
+}
+
+.--just-center {
+	justify-content: center;
+}
+
+.--just-end {
+	justify-content: flex-end;
+}
+
+.--align-str {
+	align-items: stretch;
+}
+
+.--align-center {
+	align-items: center;
+}
+
+.--align-end {
+	align-items: flex-end;
+}
+
+.--dir-col {
+	flex-direction: column;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+html {
+	line-height: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+	margin: 0;
+}
+
+h1, h2 {
+	font: {
+		family: 'Marmelad';
+		weight: 400;
+		size: 24px;
+	}
+	line-height: 29px;
+}
+
+h3, h4, h5, h6, p, a, span, ul, ol, li, button {
+	font: {
+		family: 'Raleway';
+		weight: 500;
+		size: 16px;
+	}
+	line-height: 19px;
+	color: $brown;
+	@media (min-width: $tablet-min) {
+		font-size: 18px;
+		line-height: 21px;
+	}
+}
+a {
+	text-decoration: none;
+	&:hover {
+		color: $lbrown;
+	}
+	&:active {
+		color: black;
+	}
+}
+
+.btn {
+	font: {
+		weight: 600;
+		size: 16px;
+	}
+	line-height: 19px;
+	border-radius: 12px;
+	cursor: pointer;
+	&:hover {
+		opacity: 0.7;
+	}
+	&:active {
+		opacity: 0.5;
+	}
+	&--yellow {
+		background-color: $lyellow;
+		border: 1px solid $yellow;
+	}
+	&--grey {
+		background-color: $grey;
+		border: 1px solid $grey;
+	}
+}
+
+body {
+	overflow-x: hidden;
+}
+
+.container {
+	width: 100%;
+	max-width: 1460px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
